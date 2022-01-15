@@ -1,3 +1,7 @@
+# RESULT
+
+![RESULT](./pictures/week-2-assignment.gif)
+
 # Bootcamp Week 2 Assignment
 
 There are 3 pages you need to design: main, favorite and watch page respectively. You need to use router for displaying the pages. When user clicks to the favorite button, you should
