@@ -9,7 +9,7 @@
                m-flex-column"
     >
       <FavoriteContent
-          v-for="video in videos"
+          v-for="video in filteredFavoriVideos"
           :key="video.id"
           :video="video"
       >
@@ -21,6 +21,7 @@
 <script>
 import FavoriteContent from "@/components/FavoriteContent";
 import API from "@/api";
+import {mapGetters} from "vuex"
 
 export default {
   name: "FavoritesPage",
@@ -34,7 +35,20 @@ export default {
   },
   async mounted() {
     this.videos = await API.getVideoList();
-  }
+  },
+  computed: {
+    ...mapGetters({
+      getFavoriteVideos: "getFavoriteVideos",
+      textSearch: 'getSearchText'
+    }),
+    filteredFavoriVideos() {
+      return this.getFavoriteVideos.filter(
+          video => video.title.includes(this.textSearch)
+      );
+    }
+
+  },
+
 
 }
 </script>

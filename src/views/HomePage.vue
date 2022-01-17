@@ -10,7 +10,7 @@
              m-justify-content-space-around"
     >
       <Content
-          v-for="video in videos"
+          v-for="video in filteredVideos"
           :key="video.id"
           :video="video"
       >
@@ -22,12 +22,14 @@
 <script>
 import Content from "@/components/Content";
 import API from "@/api";
+import {mapGetters} from "vuex";
 
 export default {
   name: "HomePage",
-  data(){
+  data() {
     return {
       videos: [],
+
     }
   },
   components: {
@@ -35,6 +37,20 @@ export default {
   },
   async mounted() {
     this.videos = await API.getVideoList();
+  },
+  computed: {
+    ...mapGetters({
+          textSearch: 'getSearchText'
+        }
+    ),
+    filteredVideos(){
+      return this.videos.filter(
+          video => video.title.includes(this.textSearch)
+      );
+    }
+  },
+  watch: {
+
   }
 
 }
@@ -45,6 +61,7 @@ export default {
   width: 70%;
   height: auto;
 }
+
 #contents {
   width: 100%;
 }

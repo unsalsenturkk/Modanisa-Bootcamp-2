@@ -44,13 +44,14 @@
       >
         <input
             id="search-input"
+            v-model="searchText"
             type="text"
             placeholder="Ara"
             autocomplete="off"
             value=""
             class="m-flex-grow
-                       m-w-full
-                       m-text-base"
+        m-w-full
+        m-text-base"
         >
       </div>
     </div>
@@ -69,11 +70,22 @@
 </template>
 
 <script>
+
 export default {
   name: "Header",
-  methods :{
-    navigateToFavoritePage(){
-      this.$router.push({ name: 'Favorites', params: { userid: 'bootcamp' } })
+  data() {
+    return {
+      searchText : ""
+    }
+  },
+  methods: {
+    navigateToFavoritePage() {
+      this.$router.push({name: 'Favorites', params: {userid: 'bootcamp'}})
+    },
+  },
+  watch: {
+    searchText() {
+      this.$store.commit('changedSearch',this.searchText)
     }
   }
 }
@@ -85,14 +97,15 @@ export default {
   width: 70%;
   height: auto;
   background: white;
-  border-radius:50px;
+  border-radius: 50px;
   padding: 10px;
 }
 
 #search-bar {
   width: 80%;
 }
-.favorites{
+
+.favorites {
 
 }
 
