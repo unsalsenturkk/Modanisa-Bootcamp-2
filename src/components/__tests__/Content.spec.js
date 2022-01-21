@@ -1,7 +1,6 @@
 import {createLocalVue, shallowMount} from "@vue/test-utils";
 import Content from "@/components/Content";
 import Vuex from "vuex";
-import content from "@/components/Content";
 
 describe("Content.vue", () => {
 
@@ -166,18 +165,67 @@ describe("Content.vue", () => {
             })
         })
         describe('check functionality', () => {
+            it("should delegate favorite click", async () => {
+                const localVue = createLocalVue();
+                localVue.use(Vuex)
+
+                const getters = {
+                    isFavorite: () => (videoid) => {
+                        return false
+                    }
+                }
+
+                const actions = {
+                    favoriteStatusChanged: () => {
+
+                    }
+                }
+
+                const video = {
+                    "id": 1,
+                    "videoAddress": "https://www.youtube.com/watch?v=FXpIoQ_rT_c",
+                    "coverImage": "https://raw.githubusercontent.com/modanisa/bootcamp-video-db/main/video-images/1-cover.webp",
+                    "hoverImage": "https://raw.githubusercontent.com/modanisa/bootcamp-video-db/main/video-images/1-hover.webp",
+                    "title": "Vue.js Course for Beginners [2021 Tutorial]",
+                    "viewCount": 254,
+                    "publishDateInMonth": 4,
+                    "ownerImage": "https://yt3.ggpht.com/ytc/AKedOLTtJvQ1Vfew91vemeLaLdhjOwGx3tTBLlreK_QUyA=s68-c-k-c0x00ffffff-no-rj",
+                    "ownerName": "freeCodeCamp.org",
+                    "description": "Learn Vue 3 by in this full course. Vue.js is an open-source model–view–view model front end JavaScript framework for building user interfaces and single-page applications."
+                }
+
+                const store = new Vuex.Store({
+                    getters,
+                    actions
+                })
+
+                const wrapper = shallowMount(Content, {
+                    localVue,
+                    store,
+                    propsData: {
+                        video
+                    }
+                })
+
+                const mockMethod = jest.fn()
+                wrapper.setMethods({favoriteBtnClicked : mockMethod})
+
+                await wrapper.find("#favoriteButton").trigger('click')
+                expect(mockMethod).toHaveBeenCalled()
+
+            })
             it("check displayHoverImg functionality", () => {
                 const localThis = {
                     hoverImage: false,
                 }
-                content.methods.displayHoverImg.call(localThis)
+                Content.methods.displayHoverImg.call(localThis)
                 expect(localThis.hoverImage).toBeTruthy()
             })
             it("check displayCoverImg functionality", () => {
                 const localThis = {
                     hoverImage: false,
                 }
-                content.methods.displayCoverImg.call(localThis)
+                Content.methods.displayCoverImg.call(localThis)
                 expect(localThis.hoverImage).toBeFalsy()
             })
             it("check navigateToFavoritePage functionality", () => {
@@ -199,7 +247,7 @@ describe("Content.vue", () => {
                         push: jest.fn()
                     },
                 }
-                content.methods.navigateToFavoritePage.call(localThis)
+                Content.methods.navigateToFavoritePage.call(localThis)
                 expect(localThis.$router.push).toBeCalled()
             })
             it("check favoriteBtnClicked functionality", () => {
@@ -222,8 +270,8 @@ describe("Content.vue", () => {
                         dispatch
                     },
                 }
-                content.methods.favoriteBtnClicked.call(localThis)
-                expect(dispatch).toHaveBeenCalledWith("favoriteStatusChanged",video)
+                Content.methods.favoriteBtnClicked.call(localThis)
+                expect(dispatch).toHaveBeenCalledWith("favoriteStatusChanged", video)
             })
         })
     })
