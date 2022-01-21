@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteContent.vue Favorite snapshot test should renders FavoriteContent correctly 1`] = `
+<div
+  class="m-flex
+           m-flex-row"
+  id="favorite-content"
+>
+  <div
+    class="m-flex
+               m-flex-column"
+    id="favorite-img"
+  >
+    <img
+      alt="Vue.js Course for Beginners [2021 Tutorial]"
+      src="https://raw.githubusercontent.com/modanisa/bootcamp-video-db/main/video-images/1-cover.webp"
+    />
+     
+    <img
+      alt="Vue.js Course for Beginners [2021 Tutorial]"
+      src="https://raw.githubusercontent.com/modanisa/bootcamp-video-db/main/video-images/1-hover.webp"
+      style="display: none;"
+    />
+  </div>
+   
+  <div
+    class="m-flex
+             m-flex-column
+             m-justify-content-space-around"
+    id="favorite-details"
+  >
+    <div
+      class="m-flex"
+      id="title"
+    >
+      
+      Vue.js Course for Beginners [2021 Tutorial]
+    
+    </div>
+     
+    <div
+      class="m-flex
+              m-flex-column"
+      id="meta"
+    >
+      <div
+        class="m-flex"
+        id="metadata-line"
+      >
+        <span
+          id="viewCount"
+        >
+          
+           254 B görüntüleme
+         
+        </span>
+         
+        <span
+          id="separator"
+        >
+          
+            •
+          
+        </span>
+         
+        <span
+          id="publishDateInMonth"
+        >
+          
+            4 ay önce
+         
+        </span>
+      </div>
+    </div>
+     
+    <div
+      class="m-flex"
+      id="owner"
+    >
+      <img
+        id="avatar"
+        src="https://yt3.ggpht.com/ytc/AKedOLTtJvQ1Vfew91vemeLaLdhjOwGx3tTBLlreK_QUyA=s68-c-k-c0x00ffffff-no-rj"
+      />
+       
+      <div
+        id="ownerName"
+      >
+        
+        freeCodeCamp.org
+      
+      </div>
+    </div>
+     
+    <div
+      class="m-flex"
+      id="description"
+    >
+      
+      Learn Vue 3 by in this full course. Vue.js is an open-source model–view–view model front end JavaScript framework for building user interfaces and single-page applications.
+    
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesPage.vue FavoritesPage snapshot test should renders FavoritePage correclty 1`] = `
+<div
+  class="m-flex"
+  id="favoritespage"
+>
+  <div
+    class="m-flex
+             m-flex-column"
+    id="favorite-contents"
+  >
+    <favoritecontent-stub
+      video="[object Object]"
+    />
+  </div>
+</div>
+`;

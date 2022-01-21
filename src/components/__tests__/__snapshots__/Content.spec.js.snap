@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content.vue Content snapshot test should renders content correctly 1`] = `
+<div
+  class="m-flex
+             m-flex-column"
+  id="content"
+>
+  <input
+    class="favorite-button"
+    id="favoriteButton"
+    type="submit"
+    value=""
+  />
+   
+  <div
+    class="m-flex
+      m-flex-column"
+    id="img"
+  >
+    <img
+      alt="Vue.js Course for Beginners [2021 Tutorial]"
+      src="https://raw.githubusercontent.com/modanisa/bootcamp-video-db/main/video-images/1-cover.webp"
+    />
+     
+    <img
+      alt="Vue.js Course for Beginners [2021 Tutorial]"
+      src="https://raw.githubusercontent.com/modanisa/bootcamp-video-db/main/video-images/1-hover.webp"
+      style="display: none;"
+    />
+  </div>
+   
+  <div
+    class="m-flex"
+    id="details"
+  >
+    <img
+      id="avatar"
+      src="https://yt3.ggpht.com/ytc/AKedOLTtJvQ1Vfew91vemeLaLdhjOwGx3tTBLlreK_QUyA=s68-c-k-c0x00ffffff-no-rj"
+    />
+     
+    <div
+      class="m-flex
+                 m-flex-column"
+      id="meta"
+    >
+      <div
+        id="title"
+      >
+        
+        Vue.js Course for Beginners [2021 Tutorial]
+      
+      </div>
+       
+      <div
+        id="ownerName"
+      >
+        
+        freeCodeCamp.org
+      
+      </div>
+       
+      <div
+        class="m-flex"
+        id="metadata-line"
+      >
+        <span
+          id="viewCount"
+        >
+          
+           254 B görüntüleme
+         
+        </span>
+         
+        <span
+          id="separator"
+        >
+          
+            •
+          
+        </span>
+         
+        <span
+          id="publishDateInMonth"
+        >
+          
+            4 ay önce
+         
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

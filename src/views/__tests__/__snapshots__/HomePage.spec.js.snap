@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage.vue HomePage Snapshot renders HomePage correctly  1`] = `
+<div
+  class="m-flex"
+  id="homepage"
+>
+  <div
+    class="m-flex
+           m-flex-wrap
+           m-justify-content-space-around"
+    id="contents"
+  >
+    <content-stub
+      video="[object Object]"
+    />
+    <content-stub
+      video="[object Object]"
+    />
+    <content-stub
+      video="[object Object]"
+    />
+  </div>
+</div>
+`;

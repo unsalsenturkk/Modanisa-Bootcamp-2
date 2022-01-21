@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.vue Header snapshot test should renders Header correctly 1`] = `
+<div
+  class="m-flex
+           m-justify-content-space-around"
+  id="header"
+>
+  <div
+    class="m-flex"
+    id="search-bar"
+  >
+    <div
+      class="m-flex
+                    m-items-center
+                    lg:m-py-3"
+      id="search-icon-container"
+    >
+      <svg
+        class="m-w-4"
+        id="search-input-icon"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+        >
+          <circle
+            cx="7.111"
+            cy="7.111"
+            fill="#FFF"
+            r="6.111"
+            stroke="#000"
+            stroke-width="2"
+          />
+           
+          <path
+            d="M12.34 11.222l2.986 2.986c.39.39.39 1.023 0 1.414-.39.39-1.023.39-1.414 0l-2.986-2.986c-.39-.39-.39-1.023 0-1.414.39-.39 1.024-.39 1.415 0z"
+            fill="#000"
+          />
+        </g>
+      </svg>
+    </div>
+     
+    <div
+      class="m-flex
+                   m-flex-1"
+    >
+      <input
+        autocomplete="off"
+        class="m-flex-grow
+      m-w-full
+      m-text-base"
+        id="search-input"
+        placeholder="Ara"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+   
+  <div
+    id="favorites"
+  >
+    <span
+      class="header-favorites"
+      id="favorites-span"
+    >
+      
+          Favoriler
+        
+    </span>
+  </div>
+</div>
+`;

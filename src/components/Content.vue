@@ -5,6 +5,7 @@
                m-flex-column"
   >
     <input
+        id="favoriteButton"
         class="favorite-button"
         :class="{'favorite':this.isFavorite(video.id)}"
         @click="favoriteBtnClicked"

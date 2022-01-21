@@ -82,11 +82,12 @@ export default {
     navigateToFavoritePage() {
       this.$router.push({name: 'Favorites', params: {userid: 'bootcamp'}})
     },
+    onTextChange(newVal) {
+      this.$store.commit('changedSearch',newVal)
+    }
   },
   watch: {
-    searchText() {
-      this.$store.commit('changedSearch',this.searchText)
-    }
+    searchText : "onTextChange"
   }
 }
 </script>

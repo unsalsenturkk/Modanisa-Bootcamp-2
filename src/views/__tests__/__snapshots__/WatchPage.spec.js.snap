@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WatchPage.vue WatchPage Snapshot renders WatchPage correctly  1`] = `
+<div
+  id="watchpage"
+>
+  <h1>
+    1
+  </h1>
+</div>
+`;
