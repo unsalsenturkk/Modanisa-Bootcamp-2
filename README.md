@@ -2,7 +2,7 @@
 
 ![RESULT](./pictures/week-2-assignment.gif)
 
-# RESULT WİTH VUEX
+# RESULT WİTH VUEX (vuex branch)
 ![RESULT](./pictures/week-2-assignment_vuex.gif)
 
 # Bootcamp Week 2 Assignment
